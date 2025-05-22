@@ -11,7 +11,7 @@ app.route('/matches', appMatches);
 app.route('/players', appPlayers);
 
 export default { 
-  port: Bun.env.PORT, 
+  port: Bun.env.PORT || 3000, 
   fetch: app.fetch, 
 } 
 
