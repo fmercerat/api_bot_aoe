@@ -7,13 +7,15 @@ import { appPlayers } from './controllers/players.controller';
 
 const app = new Hono()
 
-// Add caching middleware
-app.use('*', cache({
-  cacheName: 'api-cache',
-  cacheControl: 'max-age=60', 
-  wait: false,
-  keyGenerator: (c) => c.req.url,
-}))
+// Add caching middleware only if caches is available
+if (typeof caches !== 'undefined') {
+  app.use('*', cache({
+    cacheName: 'api-cache',
+    cacheControl: 'max-age=60', 
+    wait: false,
+    keyGenerator: (c) => c.req.url,
+  }))
+}
 
 app.route('/maps', appMaps);
 app.route('/matches', appMatches);
