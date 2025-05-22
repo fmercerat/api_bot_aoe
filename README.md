@@ -13,6 +13,17 @@ Obtiene información sobre los jugadores.
 ### GET /matches
 Obtiene información sobre las partidas.
 
+## Variables de Entorno
+
+El proyecto requiere las siguientes variables de entorno:
+
+```env
+MONGOUSR=tu_usuario_mongodb
+MONGOPSW=tu_contraseña_mongodb
+MONGOHOST=tu_host_mongodb
+PORT=puerto_del_servidor
+```
+
 ## Instalación
 
 ```bash
