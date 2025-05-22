@@ -102,7 +102,7 @@ appPlayers.get("/:userId", async (c) => {
             }
         };
 
-        console.log(JSON.stringify(playerWithStats))
+        // console.log(JSON.stringify(playerWithStats))
 
         return c.json(playerWithStats);
     } catch (error) {
