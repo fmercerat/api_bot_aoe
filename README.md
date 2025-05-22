@@ -34,6 +34,7 @@ MONGOUSR=tu_usuario_mongodb
 MONGOPSW=tu_contraseña_mongodb
 MONGOHOST=tu_host_mongodb
 PORT=puerto_del_servidor
+ENVIRONMENT=dev
 ```
 
 ## Instalación
