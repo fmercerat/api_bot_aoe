@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = `mongodb+srv://${Bun.env.MONGOUSR}:${Bun.env.MONGOPSW}@${Bun.env.MONGOHOST}/bot`;
+const MONGODB_URI = `mongodb+srv://${Bun.env.MONGOUSR}:${Bun.env.MONGOPSW}@${Bun.env.MONGOHOST}/bot_dev`;
 console.log("Conectando a DB Mongo")
 
 const connectOptions = {
