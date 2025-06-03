@@ -72,6 +72,7 @@ const matchSchema = new mongoose.Schema({
     team2_civs: { type: Object, required: true },
     status: { type: String, required: true },
     winner: { type: Number, required: true },
+    aoeid: { type: String, required: false },
 });
 
 export const Matches = mongoose.model('Matches', matchSchema); 

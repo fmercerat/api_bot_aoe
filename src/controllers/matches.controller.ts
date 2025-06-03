@@ -20,6 +20,32 @@ appMatches
         return c.json({ error: "Error al obtener los partidos" }, 500);
     }
 })
+.get("/activity", async (c) => {
+    try {
+        const activity = await Matches.aggregate([
+            {
+                $group: {
+                    _id: { $hour: "$createdAt" },
+                    total: { $sum: 1 }
+                }
+            },
+            {
+                $project: {
+                    _id: 0,
+                    hour: "$_id",
+                    total: 1
+                }
+            },
+            {
+                $sort: { hour: 1 }
+            }
+        ]);
+        
+        return c.json(activity);
+    } catch (error) {
+        return c.json({ error: "Error al obtener la actividad de partidos" }, 500);
+    }
+})
 .get("/:number", async(c) => {
     try {
         const number = parseInt(c.req.param("number"));
