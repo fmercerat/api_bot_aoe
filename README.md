@@ -22,6 +22,9 @@ Obtiene información sobre todas las partidas completadas con un ganador.
 ### GET /matches/ongoings
 Obtiene información sobre las partidas que están actualmente en curso.
 
+### GET /matches/activity
+Obtiene estadísticas de actividad de partidas por hora del día, mostrando el total de partidas jugadas en cada hora.
+
 ### GET /matches/:number
 Obtiene información sobre una partida específica por su número de juego.
 
